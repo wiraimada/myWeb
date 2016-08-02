@@ -13,4 +13,9 @@ class Artikel_model extends CI_Model {
 		$query = $this->db->get_where('artikel', array('slug' => $read));
 		return $query->row_array();
 	}
+	
+		// Kode untuk menambah artikel baru
+	public function tambah($data) {
+		return $this->db->insert('artikel', $data);
+	}
 }
